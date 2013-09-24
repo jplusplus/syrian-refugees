@@ -1,0 +1,103 @@
+{
+	"locales" : {
+		"title" : {
+			"en" : "A short story about how #COUNTRY# is helping <span class=\"color\">2 million</span> Syrian refugees",
+			"fr" : "Une courte histoire sur comment #COUNTRY# aide <span class=\"color\">2 millions</span> de réfugiés Syriens"
+		}
+	},
+	"story"    : [
+		{
+			"name": {
+				"en" : "Approximately 2,000,000 Syrians have fled the country because of the war. <span class=\"color\">#NUMBER#</span> of these refugees are less than 4 years of age.",
+				"fr" : "Environ 2.000.000 de Syriens ont fui le pays à cause de la guerre. <span class=\"color\">#NUMBER#</span> de ces réfugiés ont moins de 4 ans."
+			},
+			"value": 372000},
+		{
+			"name": {
+				"en" : "<span class=\"color\">#NUMBER#</span> are 5 to 11 years old.",
+				"fr" : "<span class=\"color\">#NUMBER#</span> ont entre 5 et 11 ans"
+			},
+			"value": 394000
+		},
+		{
+			"name": {
+				"en" : "<span class=\"color\">#NUMBER#</span> are teenagers.",
+				"fr" : "<span class=\"color\">#NUMBER#</span> sont adolescents."
+			},
+			"value": 264000
+		},
+		{
+			"name": {
+				"en" : "<span class=\"color\">#NUMBER#</span> adults have fled the country.",
+				"fr" : "<span class=\"color\">#NUMBER#</span> adultes ont fui le pays."
+			},
+			"value": 912000
+		},
+		{
+			"name": {
+				"en" : "And <span class=\"color\">#NUMBER#</span> refugees are older than 60 years.",
+				"fr" : "Et <span class=\"color\">#NUMBER#</span> réfugiés ont plus de 60 ans."
+			},
+			"value": 58000
+		}
+	],
+	"countries": {
+		"fi" : {
+			"name": {
+				"en": "Finland",
+				"fr": "la Finlande"
+			},
+			"sentence": {
+				"en" : "Finland has so far received #NUMBER# Syrian asylum seekers this year.",
+				"fr" : "La Finlande a reçu #NUMBER# Syriens demandeurs d'asile cette année."
+			},
+			"helping" : 72,
+			"source" :{
+				"name":"Yle",
+				"url" : "http://yle.fi/uutiset/interior_minister_finland_could_take_in_500_syrian_refugees/6838793"
+			}
+		},
+		"ch" : {
+			"name": {
+				"en": "Switzerland",
+				"fr": "pouet"
+			},
+			"sentence": {
+				"en" : "Switzerland is planning to take up to #NUMBER# Syrian refugees within the next 3 years."
+			},
+			"helping" : 500,
+			"source" :{
+				"name":"Tages-Anzeiger",
+				"url" : "http://www.tagesanzeiger.ch/schweiz/standard/Sommaruga-holt-500-syrische-Fluechtlinge-in-die-Schweiz/story/15112816"
+			}
+		},
+		"de" : {
+			"name": {
+				"en": "Germany",
+				"fr": "pouet"
+			},
+			"sentence": {
+				"en" : "Germany is planning to take up to #NUMBER# Syrian refugees."
+			},
+			"helping" : 5000,
+			"source" :{
+				"name":"BAMF (official)",
+				"url" : "http://www.bamf.de/SharedDocs/Meldungen/DE/2013/20130617-aufnahme-syrien-unhcr.html"
+			}
+		},
+		"ca" : {
+			"name": {
+				"en": "Canada",
+				"fr": "pouet"
+			},
+			"sentence": {
+				"en" : "Canada plans to accept up to #NUMBER# Syrian refugees."
+			},
+			"helping" : 1300,
+			"source" :{
+				"name":"CBC",
+				"url" : "http://www.cbc.ca/news/politics/canada-to-accept-up-to-1-300-syrian-refugees-1.1353950"
+			}
+		}
+	}
+}

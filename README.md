@@ -1,4 +1,4 @@
 syria
 =====
 
-Syria refugee visualization
+Syria refugees visualization
