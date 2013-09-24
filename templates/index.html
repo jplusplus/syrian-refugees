@@ -45,10 +45,17 @@ h2 {
     margin-top: 15px;
 }
 .break {
-    margin: 14px 16px 18px;
     font-size: 39px;
+    width:auto;
+    position: relative;
     font-weight: bold;
 }
+.break span {
+    background-color: #333;
+    padding: 15px 13px 20px;
+
+}
+
 .color {
     color: rgb(214, 83, 83);
 }
@@ -58,6 +65,12 @@ h2 {
 }
 #credit {
     font-size: 13px;
+}
+
+.popul {
+    /*margin: 0 auto;*/
+    background-image: url({{ url_for('static', filename='1.png') }});
+
 }
 
 </style>
@@ -133,23 +146,42 @@ h2 {
     }
 
     function drawIcons(n) {
-        // Count number of image blocks
-        var n2000 = Math.floor(n / 2000);
-        var n200  = Math.floor((n - n2000 * 2000) / 200);
-        var n1    = Math.floor(n - n2000 * 2000 - n200 * 200);
-        // Draw 2000 item blocks
-        for (var j=0; j<n2000; j++) {
-            if (j%25==0 && j!==0) cont.append('<div class="break">'+addCommas(j*2000)+'</div>')             
-            cont.append('<img src="{{ url_for("static", filename="2000.png") }}" class="row2000"/><br>');
+        var img_width = 8, img_height = 14;
+        var window_width = $(window).width()-10;
+
+        var x    = Math.floor(window_width/img_width);
+        var y    = Math.floor(n/x);
+        var rest = Math.floor(n - (x * y));
+
+        var $popul = $("<div />");
+        $popul.addClass("popul").css({
+            width  : x * img_width,
+            height : y * img_height
+        });
+        cont.append($popul);
+        if (rest > 0) {
+            var $rest = $("<div />");
+            $rest.addClass("popul").css({
+                width  : rest * img_width,
+                height : img_height
+            });
+            cont.append($rest);
         }
-        // Draw 200 item blocks
-        for (var j=0; j<n200; j++) {
-            cont.append('<img src="{{ url_for("static", filename="200.png") }}" class="row200"/><br>');             
+
+        // add markers
+        var n50000 = Math.floor(n / 50000);
+        for (var j=0; j<n50000; j++) {
+            var text = addCommas((j+1)*50000);
+
+            var $marker = $("<div />").addClass("break");
+            $marker.append($("<span />").text(text));
+            $marker.css({
+                top : (50000/x + (50000/x)*j) *img_height,
+            });
+            $popul.append($marker);
+            
         }
-        // Draw single items
-        for (var j=0; j<n1; j++) {
-            cont.append('<img src="{{ url_for("static", filename="1.png") }}" class="row1"/>');             
-        }
+
     }
 
     var cont = $("#container");
@@ -211,7 +243,12 @@ h2 {
         $('.twitter-share-button').attr('data-url', url);
         $('#source').text(country["source"]["name"]).attr('href', country["source"]["url"]);
 
+        $(window).resize(render);
     });
+
+    function render() {
+        console.log("pouet");
+    }
 
 // twitter share
 !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
