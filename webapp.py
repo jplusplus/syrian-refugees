@@ -21,7 +21,15 @@ def home_page():
     return render_template("index.html")
 
 if __name__ == "__main__":
+    import sys
+    if len(sys.argv) > 1:
+        if sys.argv[1] == "build":
+            from flask_frozen import Freezer
+            freezer = Freezer(app)
+            freezer.freeze()
+        exit()
     app.debug = True
     app.run(host='0.0.0.0')
+
 
 # EOF
