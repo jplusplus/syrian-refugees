@@ -266,7 +266,7 @@ footer {
         
         // Set country specific content
         $('h1').html(locales['title'].replace("#COUNTRY#", country["name"]));
-        $('twitter').html(locales['title'].replace("#COUNTRY#", country["name"]));
+        $('title').html(locales['twitter'].replace("#COUNTRY#", country["name"]));
         var url = location.toString();
         $('.fb-like').attr('data-href', url);
         $('.twitter-share-button').attr('data-url', url);
