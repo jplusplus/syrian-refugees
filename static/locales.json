@@ -3,6 +3,18 @@
 		"title" : {
 			"en" : "A short story about how #COUNTRY# is helping <span class=\"color\">2 million</span> Syrian refugees",
 			"fr" : "Une courte histoire sur comment #COUNTRY# aide <span class=\"color\">2 millions</span> de réfugiés Syriens"
+		},
+		"we_cant_help" : {
+			"en" : "But hey, we can't help everyone.",
+			"fr" : "Mais on ne peut pas aider tout le monde."
+		},
+		"back_to_top" : {
+			"en" : "Back to top",
+			"fr" : "Retour au début"
+		},
+		"twitter" : {
+			"en" : "A short story about how #COUNTRY# is helping 2 million Syrian refugees",
+			"fr" : "Une courte histoire sur comment #COUNTRY# aide 2 millions de réfugiés Syriens"
 		}
 	},
 	"story"    : [
@@ -60,10 +72,11 @@
 		"ch" : {
 			"name": {
 				"en": "Switzerland",
-				"fr": "pouet"
+				"fr": "La Suisse"
 			},
 			"sentence": {
-				"en" : "Switzerland is planning to take up to #NUMBER# Syrian refugees within the next 3 years."
+				"en" : "Switzerland is planning to take up to #NUMBER# Syrian refugees within the next 3 years.",
+				"fr" : "La Suisse prévoit de prendre #NUMBER# réfugiés Syriens dans les trois prochaines années."
 			},
 			"helping" : 500,
 			"source" :{

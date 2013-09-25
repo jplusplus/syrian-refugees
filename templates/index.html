@@ -27,7 +27,6 @@ h1 {
     font-size: 80px;
     width: 700px;
     display: inline-block;
-    margin-top: 200px;
     margin-bottom: 500px;
 }
 h2 {
@@ -70,9 +69,10 @@ h2 {
 .popul {
     /*margin: 0 auto;*/
     background-image: url({{ url_for('static', filename='1.png') }});
-
 }
-
+.popul.only-rest {
+    margin: 0 auto;
+}
 </style>
 </head>
 
@@ -86,12 +86,11 @@ h2 {
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
 
-    
-    <div id="container"><a href="javascript:scrollTo('h0', 500)"><h1 id="top"></h1></a></div>
+    <a href="javascript:scrollTo('h0', 500)"><h1 id="top"></h1></a>
+    <div id="container"></div>
     <div id="share" class="block">
     <div class="fb-like" data-href="http://jplusplus.se/u/syria" data-width="300" data-colorscheme="dark" data-layout="button_count" data-action="recommend" data-show-faces="true" data-send="false"></div>
-        
-        <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://jplusplus.se/u/syria" data-via="jensfinnas">Tweet</a>
+        <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://jplusplus.se/u/syria" data-via="jplusplus_">Tweet</a>
     </div>
 
     <div id="credit">
@@ -134,8 +133,8 @@ h2 {
     }
     function getParameterByName(name) {
         name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
-        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-            results = regex.exec(location.search);
+        var regex = new RegExp("[\\#&]" + name + "=([^&#]*)"),
+            results = regex.exec(location.hash);
         return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
     }
 
@@ -145,9 +144,9 @@ h2 {
         $('html,body').animate({scrollTop: aTag.offset().top},time);
     }
 
-    function drawIcons(n) {
+    function drawIcons(n, classes) {
         var img_width = 8, img_height = 14;
-        var window_width = $(window).width()-10;
+        var window_width = $(window).width() - 30;
 
         var x    = Math.floor(window_width/img_width);
         var y    = Math.floor(n/x);
@@ -159,29 +158,30 @@ h2 {
             height : y * img_height
         });
         cont.append($popul);
+        // add markers
+        var n50000 = Math.floor(n / 50000);
+        for (var j=0; j<n50000; j++) {
+            var $marker = $("<div />").addClass("break");
+            $marker.append($("<span />").text(addCommas((j+1)*50000)));
+            var top = Math.min((50000/x + (50000/x)*j) *img_height,  y * img_height - 200);
+            $marker.css({
+                top : top
+            });
+            $popul.append($marker);
+            
+        }
+
         if (rest > 0) {
             var $rest = $("<div />");
+            if (y == 0) {
+                $rest.addClass("only-rest");
+            }
             $rest.addClass("popul").css({
                 width  : rest * img_width,
                 height : img_height
             });
             cont.append($rest);
         }
-
-        // add markers
-        var n50000 = Math.floor(n / 50000);
-        for (var j=0; j<n50000; j++) {
-            var text = addCommas((j+1)*50000);
-
-            var $marker = $("<div />").addClass("break");
-            $marker.append($("<span />").text(text));
-            $marker.css({
-                top : (50000/x + (50000/x)*j) *img_height,
-            });
-            $popul.append($marker);
-            
-        }
-
     }
 
     var cont = $("#container");
@@ -221,34 +221,42 @@ h2 {
         var story   = translate(data['story']    , code_language);
         var locales = translate(data['locales']  , code_language);
 
-        for (var i=0; i<story.length; i++) {
-            var d   = story[i];
-            var str = d.name.replace("#NUMBER#", addCommas(d.value))
-            // Add heading
-            cont.append('<h2 id="h'+i+'"><a href="javascript:scrollTo(\'h'+(i+1)+'\', '+(d.value/100)+')">'+str+' <br><div class="button">Tell me more</div></a></h2>');
+        function render() {
+            cont.html("");
+            for (var i=0; i<story.length; i++) {
+                var d   = story[i];
+                var str = d.name.replace("#NUMBER#", addCommas(d.value));
+                // Add heading
+                cont.append('<h2 id="h'+i+'"><a href="javascript:scrollTo(\'h'+(i+1)+'\', '+(d.value/100)+')">'+str+' <br><div class="button">Tell me more</div></a></h2>');
+                // Draw icons
+                drawIcons(d.value);
+            }
+            // Add final national heading
+            cont.append('<h2 id="h'+story.length+'">'+country["sentence"].replace("#NUMBER#", "<span class=\"color\">"+country["helping"]+"</span>")+'<br>'+locales['we_cant_help']+'</h2><br>');
             // Draw icons
-            drawIcons(d.value);
+            drawIcons(country["helping"]);
+            // Scroll to top
+            cont.append('<br><br><br><br><br><div class="button"><a href="javascript:scrollTo(\'top\', 2000)">'+locales['back_to_top']+'</a></div>');      
         }
-        // Add final national heading
-        cont.append('<h2 id="h'+story.length+'">'+country["sentence"].replace("#NUMBER#", "<span class=\"color\">"+country["helping"]+"</span>")+'<br>But hey, we can\'t help everyone.</h2><br>');
-        // Draw icons
-        drawIcons(country["helping"]);
 
-        // Scroll to top
-        cont.append('<br><br><br><br><br><div class="button"><a href="javascript:scrollTo(\'top\', 2000)">Back to top</a></div>');      
+        render();
+        var _resizeTimer;
+        $(window).resize(function() {
+            clearTimeout(_resizeTimer);
+            _resizeTimer = setTimeout(function() {
+                render();
+            }, 200);
+        });
+        
         // Set country specific content
         $('h1').html(locales['title'].replace("#COUNTRY#", country["name"]));
-        $('title').html(locales['title'].replace("#COUNTRY#", country["name"]));
+        $('twitter').html(locales['title'].replace("#COUNTRY#", country["name"]));
+        var url = location.toString();
         $('.fb-like').attr('data-href', url);
         $('.twitter-share-button').attr('data-url', url);
         $('#source').text(country["source"]["name"]).attr('href', country["source"]["url"]);
-
-        $(window).resize(render);
     });
 
-    function render() {
-        console.log("pouet");
-    }
 
 // twitter share
 !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
