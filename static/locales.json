@@ -12,6 +12,10 @@
 			"en" : "Back to top",
 			"fr" : "Retour au début"
 		},
+		"tell_me_more" : {
+			"en" : "Tap for more",
+			"fr" : "Cliquez pour continuer"
+		},
 		"twitter" : {
 			"en" : "A short story about how #COUNTRY# is helping 2 million Syrian refugees",
 			"fr" : "Une courte histoire sur comment #COUNTRY# aide 2 millions de réfugiés Syriens"

@@ -24,7 +24,7 @@ a, a:visited, a:active, a:hover {
     margin-bottom: 4px;
 }
 h1 {
-    font-size: 80px;
+    font-size: 4em;
     width: 700px;
     display: inline-block;
     margin-bottom: 500px;
@@ -100,7 +100,7 @@ footer {
 
     <div id="credit">
         <strong>Sources:</strong> <a href="http://yle.fi/uutiset/interior_minister_finland_could_take_in_500_syrian_refugees/6838793" target="_blank" id="source">Yle</a>, <a href="http://data.unhcr.org/syrianrefugees/regional.php">UNHCR</a>.<br>
-    <a href="http://jplusplus.se" target="_blank">Jens Finnäs, Journalism++ Stockholm</a>
+    <a href="http://jplusplus.org" target="_blank">Journalism++</a>
     </div>
     <footer>
     </footer>
@@ -234,7 +234,7 @@ footer {
                 var d   = story[i];
                 var str = d.name.replace("#NUMBER#", addCommas(d.value));
                 // Add heading
-                cont.append('<h2 id="h'+i+'"><a href="javascript:scrollTo(\'h'+(i+1)+'\', '+(d.value/100)+')">'+str+' <br><div class="button">Tell me more</div></a></h2>');
+                cont.append('<h2 id="h'+i+'"><a href="javascript:scrollTo(\'h'+(i+1)+'\', '+(d.value/100)+')">'+str+' <br><div class="button">'+locales['tell_me_more']+'</div></a></h2>');
                 // Draw icons
                 drawIcons(d.value);
             }
@@ -277,6 +277,6 @@ footer {
   ga('create', 'UA-44179248-1', 'jplusplus.se');
   ga('send', 'pageview');
 
-</script>   
+</script>
 </body>
 </html>
