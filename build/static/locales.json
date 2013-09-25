@@ -2,11 +2,11 @@
 	"locales" : {
 		"title" : {
 			"en" : "A short story about how #COUNTRY# is helping <span class=\"color\">2 million</span> Syrian refugees",
-			"fr" : "Une courte histoire sur comment #COUNTRY# aide <span class=\"color\">2 millions</span> de réfugiés Syriens"
+			"fr" : "Comment #COUNTRY# aide <span class=\"color\">2&nbsp;millions</span> de réfugiés Syriens"
 		},
 		"we_cant_help" : {
 			"en" : "But hey, we can't help everyone.",
-			"fr" : "Mais on ne peut pas aider tout le monde."
+			"fr" : "Mais bon, on ne peut pas aider tout le monde."
 		},
 		"back_to_top" : {
 			"en" : "Back to top",
@@ -21,8 +21,8 @@
 			"fr" : "Une courte histoire sur comment #COUNTRY# aide 2 millions de réfugiés Syriens"
 		},
 		"footer" : {
-			"en" : "This application is offered by Slate",
-			"fr" : "Cette application vous est proposée par Slate"
+			"en" : "",
+			"fr" : "Cette application vous est proposée par Slate.fr"
 		}
 	},
 	"story"    : [
@@ -80,7 +80,7 @@
 		"ch" : {
 			"name": {
 				"en": "Switzerland",
-				"fr": "La Suisse"
+				"fr": "la Suisse"
 			},
 			"sentence": {
 				"en" : "Switzerland is planning to take up to #NUMBER# Syrian refugees within the next 3 years.",
@@ -95,7 +95,7 @@
 		"de" : {
 			"name": {
 				"en": "Germany",
-				"fr": "pouet"
+				"fr": "l'Allemagne"
 			},
 			"sentence": {
 				"en" : "Germany is planning to take up to #NUMBER# Syrian refugees."
@@ -109,7 +109,7 @@
 		"ca" : {
 			"name": {
 				"en": "Canada",
-				"fr": "pouet"
+				"fr": "le Canada"
 			},
 			"sentence": {
 				"en" : "Canada plans to accept up to #NUMBER# Syrian refugees."
@@ -118,6 +118,21 @@
 			"source" :{
 				"name":"CBC",
 				"url" : "http://www.cbc.ca/news/politics/canada-to-accept-up-to-1-300-syrian-refugees-1.1353950"
+			}
+		},
+		"ca" : {
+			"name": {
+				"en": "France",
+				"fr": "la France"
+			},
+			"sentence": {
+				"en" : "France accepted #NUMBER# asylum seekers since the beginning of the conflict.",
+				"fr" : "La France a accepté #NUMBER# demandeurs d'asile depuis le début du conflit."
+			},
+			"helping" : 1700,
+			"source" :{
+				"name":"le JDD",
+				"url" : "http://www.lejdd.fr/Societe/Pourquoi-la-France-accueille-peu-de-refugies-syriens-630462"
 			}
 		}
 	}
