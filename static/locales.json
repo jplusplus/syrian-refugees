@@ -15,6 +15,10 @@
 		"twitter" : {
 			"en" : "A short story about how #COUNTRY# is helping 2 million Syrian refugees",
 			"fr" : "Une courte histoire sur comment #COUNTRY# aide 2 millions de réfugiés Syriens"
+		},
+		"footer" : {
+			"en" : "This application is offered by Slate",
+			"fr" : "Cette application vous est proposée par Slate"
 		}
 	},
 	"story"    : [
