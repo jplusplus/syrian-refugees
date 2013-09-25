@@ -20,6 +20,10 @@
 			"en" : "A short story about how #COUNTRY# is helping 2 million Syrian refugees",
 			"fr" : "Une courte histoire sur comment #COUNTRY# aide 2 millions de réfugiés Syriens"
 		},
+		"credit" : {
+			"en" : "<a href=\"https://twitter.com/jensfinnas\" target=\"_blank\">Jens Finnäs</a> and <a href=\"https://twitter.com/vied12\" target=\"_blank\">Edouard Richard</a>, <a href=\"http://jplusplus.org\" target=\"_blank\">Journalism++</a>",
+			"fr" : "<a href=\"https://twitter.com/jensfinnas\" target=\"_blank\">Jens Finnäs</a> et <a href=\"https://twitter.com/vied12\" target=\"_blank\">Edouard Richard</a>, <a href=\"http://jplusplus.org\" target=\"_blank\">Journalism++</a>"
+		},
 		"footer" : {
 			"en" : "",
 			"fr" : "Cette application vous est proposée par Slate.fr"

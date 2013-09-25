@@ -63,7 +63,7 @@ h2 {
     margin: 30px;
     margin-top: 100px;
 }
-#credit {
+#credit, #sources {
     font-size: 13px;
 }
 
@@ -92,9 +92,11 @@ footer {
         <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://jplusplus.se/u/syria" data-via="jplusplus_">Tweet</a>
     </div>
 
+    <div id="sources">
+        <strong>Sources:</strong> <a href="http://yle.fi/uutiset/interior_minister_finland_could_take_in_500_syrian_refugees/6838793" target="_blank" id="source">Yle</a>, <a href="http://data.unhcr.org/syrianrefugees/regional.php">UNHCR</a>.
+    </div>
     <div id="credit">
-        <strong>Sources:</strong> <a href="http://yle.fi/uutiset/interior_minister_finland_could_take_in_500_syrian_refugees/6838793" target="_blank" id="source">Yle</a>, <a href="http://data.unhcr.org/syrianrefugees/regional.php">UNHCR</a>.<br>
-    <a href="http://jplusplus.org" target="_blank">Journalism++</a>
+        <a href="https://twitter.com/jensfinnas" target="_blank">Jens Finnäs</a> and <a href="https://twitter.com/vied12" target="_blank">Edouard Richard</a>, <a href="http://jplusplus.org" target="_blank">Journalism++</a>
     </div>
     <footer>
     </footer>
@@ -272,6 +274,7 @@ footer {
         $('.fb-like').attr('data-href', url);
         $('.twitter-share-button').attr('data-url', url);
         $('#source').text(country["source"]["name"]).attr('href', country["source"]["url"]);
+        $('#credit').html(locales.credit);
         $("footer").html(locales.footer);
 
     });
