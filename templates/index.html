@@ -83,13 +83,6 @@ footer {
 
 <body>
     <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/sv_SE/all.js#xfbml=1&appId=589389644451916";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
 
     <a href="javascript:scrollTo('h0', 500)"><h1 id="top"></h1></a>
     <div id="container"></div>
@@ -219,10 +212,26 @@ footer {
         return translated;
     }
 
+    var code_country  = getParameterByName("cn") || "fi";
+    var code_language = getParameterByName("ln") || "en";
+
+    // facebook
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        var codes_regions = {
+            'en' : "en_EN",
+            'fr' : "fr_FR",
+            "fi" : "sv_SE"
+        };
+        js.src = "//connect.facebook.net/"+codes_regions[code_language]+"/all.js#xfbml=1&appId=589389644451916";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
+    // load locales
     $.getJSON("{{ url_for('static', filename="locales.json")}}", function(data) {
 
-        var code_country  = getParameterByName("cn") || "fi";
-        var code_language = getParameterByName("ln") || "en";
 
         var country = translate(data['countries'], code_language)[code_country];
         var story   = translate(data['story']    , code_language);
@@ -263,6 +272,7 @@ footer {
         $('.twitter-share-button').attr('data-url', url);
         $('#source').text(country["source"]["name"]).attr('href', country["source"]["url"]);
         $("footer").html(locales.footer);
+
     });
 
 
