@@ -156,9 +156,11 @@ footer {
         var rest = Math.floor(n - (x * y));
 
         var $popul = $("<div />");
+        var width  = x * img_width;
+        var height = y * img_height;
         $popul.addClass("popul").css({
-            width  : x * img_width,
-            height : y * img_height
+            width  : width,
+            height : height
         });
         cont.append($popul);
         // add markers
@@ -166,7 +168,7 @@ footer {
         for (var j=0; j<n50000; j++) {
             var $marker = $("<div />").addClass("break");
             $marker.append($("<span />").text(addCommas((j+1)*50000)));
-            var top = Math.min((50000/x + (50000/x)*j) *img_height,  y * img_height - 200);
+            var top = Math.min((Math.floor(50000/x) + j  * Math.floor(50000/x)) * img_height,  y * img_height - 170);
             $marker.css({
                 top : top
             });

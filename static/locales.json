@@ -138,6 +138,21 @@
 				"name":"le JDD",
 				"url" : "http://www.lejdd.fr/Societe/Pourquoi-la-France-accueille-peu-de-refugies-syriens-630462"
 			}
+		},
+		"nl" : {
+			"name": {
+				"en": "Netherlands",
+				"fr": "les Pays-Bas"
+			},
+			"sentence": {
+				"en" : "Netherlands accepted #NUMBER# asylum seekers and 250 extra are requested by parliament.",
+				"fr" : "Les Pays-Bas ont acceptés #NUMBER# demandeurs d'asile et le parlement en souhaiterait 250 supplémentaires."
+			},
+			"helping" : 500,
+			"source" :{
+				"name":"NOS",
+				"url" : "http://nos.nl/artikel/553136-kamer-meer-syrische-vluchtelingen.html"
+			}
 		}
 	}
 }
