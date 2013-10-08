@@ -33,7 +33,7 @@
 		{
 			"name": {
 				"en" : "Approximately 2,000,000 Syrians have fled the country because of the war. <span class=\"color\">#NUMBER#</span> of these refugees are less than 4 years of age.",
-				"fr" : "Environ 2.000.000 de Syriens ont fui le pays à cause de la guerre. <span class=\"color\">#NUMBER#</span> de ces réfugiés ont moins de 4 ans."
+				"fr" : "Environ 2 millions de Syriens ont fui le pays à cause de la guerre. <span class=\"color\">#NUMBER#</span> de ces réfugiés ont moins de 4 ans."
 			},
 			"value": 372000},
 		{
@@ -137,6 +137,21 @@
 			"source" :{
 				"name":"le JDD",
 				"url" : "http://www.lejdd.fr/Societe/Pourquoi-la-France-accueille-peu-de-refugies-syriens-630462"
+			}
+		},
+		"nl" : {
+			"name": {
+				"en": "Netherlands",
+				"fr": "les Pays-Bas"
+			},
+			"sentence": {
+				"en" : "Netherlands accepted #NUMBER# asylum seekers and 250 extra are requested by parliament.",
+				"fr" : "Les Pays-Bas ont acceptés #NUMBER# demandeurs d'asile et le parlement en souhaiterait 250 supplémentaires."
+			},
+			"helping" : 500,
+			"source" :{
+				"name":"NOS",
+				"url" : "http://nos.nl/artikel/553136-kamer-meer-syrische-vluchtelingen.html"
 			}
 		}
 	}
