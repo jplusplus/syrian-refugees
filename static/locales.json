@@ -2,65 +2,77 @@
 	"locales" : {
 		"title" : {
 			"en" : "A short story about how #COUNTRY# is helping <span class=\"color\">2 million</span> Syrian refugees",
-			"fr" : "Comment #COUNTRY# aide <span class=\"color\">2&nbsp;millions</span> de réfugiés Syriens"
+			"fr" : "Comment #COUNTRY# aide <span class=\"color\">2&nbsp;millions</span> de réfugiés Syriens",
+			"de" : "Wie #COUNTRY# <span class=\"color\">2 Millionen</span> Flüchtlingen aus Syrien hilft"
 		},
 		"we_cant_help" : {
 			"en" : "But hey, we can't help everyone.",
-			"fr" : "Mais bon, on ne peut pas aider tout le monde."
+			"fr" : "Mais bon, on ne peut pas aider tout le monde.",
+			"de" : "Aber hey, wir können nicht allen helfen."
 		},
 		"back_to_top" : {
 			"en" : "Back to top",
-			"fr" : "Retour au début"
+			"fr" : "Retour au début",
+			"de" : "Zurück zum Anfang"
 		},
 		"tell_me_more" : {
 			"en" : "Tap for more",
-			"fr" : "Cliquez pour continuer"
+			"fr" : "Cliquez pour continuer",
+			"de" : "Mehr nach dem Klick"
 		},
 		"twitter" : {
 			"en" : "A short story about how #COUNTRY# is helping 2 million Syrian refugees",
-			"fr" : "Une courte histoire sur comment #COUNTRY# aide 2 millions de réfugiés Syriens"
+			"fr" : "Une courte histoire sur comment #COUNTRY# aide 2 millions de réfugiés Syriens",
+			"de" : "Wie #COUNTRY# 2 Millionen Flüchtlingen aus Syrien hilft"
 		},
 		"credit" : {
 			"en" : "<a href=\"https://twitter.com/jensfinnas\" target=\"_blank\">Jens Finnäs</a> and <a href=\"https://twitter.com/vied12\" target=\"_blank\">Edouard Richard</a>, <a href=\"http://jplusplus.org\" target=\"_blank\">Journalism++</a>",
-			"fr" : "<a href=\"https://twitter.com/jensfinnas\" target=\"_blank\">Jens Finnäs</a> et <a href=\"https://twitter.com/vied12\" target=\"_blank\">Edouard Richard</a>, <a href=\"http://jplusplus.org\" target=\"_blank\">Journalism++</a>"
+			"fr" : "<a href=\"https://twitter.com/jensfinnas\" target=\"_blank\">Jens Finnäs</a> et <a href=\"https://twitter.com/vied12\" target=\"_blank\">Edouard Richard</a>, <a href=\"http://jplusplus.org\" target=\"_blank\">Journalism++</a>",
+			"de" : "<a href=\"https://twitter.com/jensfinnas\" target=\"_blank\">Jens Finnäs</a> und <a href=\"https://twitter.com/vied12\" target=\"_blank\">Edouard Richard</a>, <a href=\"http://jplusplus.org\" target=\"_blank\">Journalism++</a>"
 		},
 		"footer" : {
 			"en" : "",
-			"fr" : "Cette application vous est proposée par Slate.fr"
+			"fr" : "Cette application vous est proposée par Slate.fr",
+			"de" : ""
 		}
 	},
 	"story"    : [
 		{
 			"name": {
 				"en" : "Approximately 2,000,000 Syrians have fled the country because of the war. <span class=\"color\">#NUMBER#</span> of these refugees are less than 4 years of age.",
-				"fr" : "Environ 2 millions de Syriens ont fui le pays à cause de la guerre. <span class=\"color\">#NUMBER#</span> de ces réfugiés ont moins de 4 ans."
+				"fr" : "Environ 2 millions de Syriens ont fui le pays à cause de la guerre. <span class=\"color\">#NUMBER#</span> de ces réfugiés ont moins de 4 ans.",
+				"de" : "Ungefähr 2 Millionen Syrier sind zurzeit auf der Flucht vor dem Krieg in ihrem Land. <span class=\"color\">#NUMBER#</span> von ihnen sind weniger als 4 Jahre alt."
 			},
 			"value": 372000},
 		{
 			"name": {
 				"en" : "<span class=\"color\">#NUMBER#</span> are 5 to 11 years old.",
-				"fr" : "<span class=\"color\">#NUMBER#</span> ont entre 5 et 11 ans"
+				"fr" : "<span class=\"color\">#NUMBER#</span> ont entre 5 et 11 ans",
+				"de" : "<span class=\"color\">#NUMBER#</span> sind zwischen 5 und 11 Jahren alt"
 			},
 			"value": 394000
 		},
 		{
 			"name": {
 				"en" : "<span class=\"color\">#NUMBER#</span> are teenagers.",
-				"fr" : "<span class=\"color\">#NUMBER#</span> sont adolescents."
+				"fr" : "<span class=\"color\">#NUMBER#</span> sont adolescents.",
+				"de" : "<span class=\"color\">#NUMBER#</span> sind Jugendliche."
 			},
 			"value": 264000
 		},
 		{
 			"name": {
 				"en" : "<span class=\"color\">#NUMBER#</span> adults have fled the country.",
-				"fr" : "<span class=\"color\">#NUMBER#</span> adultes ont fui le pays."
+				"fr" : "<span class=\"color\">#NUMBER#</span> adultes ont fui le pays.",
+				"de" : "<span class=\"color\">#NUMBER#</span> Erwachsene sind aus Syrien geflüchtet."
 			},
 			"value": 912000
 		},
 		{
 			"name": {
 				"en" : "And <span class=\"color\">#NUMBER#</span> refugees are older than 60 years.",
-				"fr" : "Et <span class=\"color\">#NUMBER#</span> réfugiés ont plus de 60 ans."
+				"fr" : "Et <span class=\"color\">#NUMBER#</span> réfugiés ont plus de 60 ans.",
+				"de" : "Und <span class=\"color\">#NUMBER#</span> Flüchtlinge sind älter als 60."
 			},
 			"value": 58000
 		}
@@ -69,11 +81,13 @@
 		"fi" : {
 			"name": {
 				"en": "Finland",
-				"fr": "la Finlande"
+				"fr": "la Finlande",
+				"de": "Finnland"
 			},
 			"sentence": {
 				"en" : "Finland has so far received #NUMBER# Syrian asylum seekers this year.",
-				"fr" : "La Finlande a reçu #NUMBER# Syriens demandeurs d'asile cette année."
+				"fr" : "La Finlande a reçu #NUMBER# Syriens demandeurs d'asile cette année.",
+				"de" : "Finnland hat in diesem Jahr bisher #NUMBER# Syrier aufgenommen."
 			},
 			"helping" : 72,
 			"source" :{
@@ -84,11 +98,13 @@
 		"ch" : {
 			"name": {
 				"en": "Switzerland",
-				"fr": "la Suisse"
+				"fr": "la Suisse",
+				"de": "die Schweiz"
 			},
 			"sentence": {
 				"en" : "Switzerland is planning to take up to #NUMBER# Syrian refugees within the next 3 years.",
-				"fr" : "La Suisse prévoit de prendre #NUMBER# réfugiés Syriens dans les trois prochaines années."
+				"fr" : "La Suisse prévoit de prendre #NUMBER# réfugiés Syriens dans les trois prochaines années.",
+				"de" : "Die Schweiz plant, bis zu #NUMBER# syrische Flüchtlinge in den nächsten 3 Jahren aufzunehmen."
 			},
 			"helping" : 500,
 			"source" :{
@@ -99,10 +115,12 @@
 		"de" : {
 			"name": {
 				"en": "Germany",
-				"fr": "l'Allemagne"
+				"fr": "l'Allemagne",
+				"de": "Deutschland"
 			},
 			"sentence": {
-				"en" : "Germany is planning to take up to #NUMBER# Syrian refugees."
+				"en" : "Germany is planning to take up to #NUMBER# Syrian refugees.",
+				"de" : "Deutschland plant, bis zu #NUMBER# syrische Flüchtlinge aufzunehmen."
 			},
 			"helping" : 5000,
 			"source" :{
